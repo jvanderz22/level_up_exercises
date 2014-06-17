@@ -7,20 +7,27 @@ class Robot
 
   def initialize(args = {})
     @@registry ||= []
-    @name_generator = args[:name_generator]
-
-
-    if @name_generator
+    if @name_generator = args[:name_generator]
       @name = @name_generator.call
     else
-      generate_char = -> { ('A'..'Z').to_a.sample }
-      generate_num = -> { rand(10) }
-
-      @name = "#{generate_char.call}#{generate_char.call}#{generate_num.call}#{generate_num.call}#{generate_num.call}"
+      defineName
     end
-
-    raise NameCollisionError, 'There was a problem generating the robot name!' if !(name =~ /\w{2|\d{3}/) || @@registry.include?(name)
+    validateName
     @@registry << @name
+  end
+
+  def defineName
+    generate_char = -> { ('A'..'Z').to_a.sample }
+    generate_num = -> { rand(10) }
+    @name = "#{generate_char.call}#{generate_char.call}#{generate_num.call}"\
+      "#{generate_num.call}#{generate_num.call}"
+    puts @name
+  end
+
+  def validateName
+    unless (@name =~ /\w{2|\d{3}/) || @@registry.include?(@name)
+      raise NameCollisionError, 'There was a probelm generating the robot name!'
+    end
   end
 
 end

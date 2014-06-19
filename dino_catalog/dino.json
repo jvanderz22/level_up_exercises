@@ -1,18 +1,134 @@
 {
-  "Abrictosaurus": "#<Dino:0x007fef54841ef8>",
-  "Afrovenator": "#<Dino:0x007fef548412c8>",
-  "Carcharodontosaurus": "#<Dino:0x007fef548405a8>",
-  "Giraffatitan": "#<Dino:0x007fef5484b930>",
-  "Paralititan": "#<Dino:0x007fef5484ad28>",
-  "Suchomimus": "#<Dino:0x007fef5484a1c0>",
-  "Melanorosaurus": "#<Dino:0x007fef54849680>",
-  "Albertosaurus": "#<Dino:0x007fef54852618>",
-  "Albertonykus": "#<Dino:0x007fef54851830>",
-  "Baryonyx": "#<Dino:0x007fef54850b10>",
-  "Deinonychus": "#<Dino:0x007fef5485bce0>",
-  "Diplocaulus": "#<Dino:0x007fef5485afc0>",
-  "Megalosaurus": "#<Dino:0x007fef5485a200>",
-  "Giganotosaurus": "#<Dino:0x007fef548593a0>",
-  "Quetzalcoatlus": "#<Dino:0x007fef54858608>",
-  "Yangchuanosaurus": "#<Dino:0x007fef548637d8>"
+"Abrictosaurus": {
+"Name": "Abrictosaurus",
+"Period": "Jurassic",
+"Continent": "Africa",
+"Weight": "100",
+"Walking": "Biped",
+"Diet": "Herbivore"
+}
+,"Afrovenator": {
+"Name": "Afrovenator",
+"Period": "Jurassic",
+"Continent": "Africa",
+"Walking": "Biped",
+"Diet": "Carnivore"
+}
+,"Carcharodontosaurus": {
+"Name": "Carcharodontosaurus",
+"Period": "Albian",
+"Continent": "Africa",
+"Weight": "3000",
+"Walking": "Biped",
+"Diet": "Carnivore"
+}
+,"Giraffatitan": {
+"Name": "Giraffatitan",
+"Period": "Jurassic",
+"Continent": "Africa",
+"Weight": "6600",
+"Walking": "Quadriped",
+"Diet": "Herbivore"
+}
+,"Paralititan": {
+"Name": "Paralititan",
+"Period": "Cretaceous",
+"Continent": "Africa",
+"Weight": "120000",
+"Walking": "Quadriped",
+"Diet": "Herbivore"
+}
+,"Suchomimus": {
+"Name": "Suchomimus",
+"Period": "Cretaceous",
+"Continent": "Africa",
+"Weight": "10400",
+"Walking": "Biped",
+"Diet": "Carnivore"
+}
+,"Melanorosaurus": {
+"Name": "Melanorosaurus",
+"Period": "Triassic",
+"Continent": "Africa",
+"Weight": "2400",
+"Walking": "Quadriped",
+"Diet": "Herbivore"
+}
+,"Albertosaurus": {
+"Name": "Albertosaurus",
+"Period": "Late Cretaceous",
+"Continent": "North America",
+"Weight": "2000",
+"Walking": "Biped",
+"Description": "Like a T-Rex but smaller.",
+"Diet": "Carnivore"
+}
+,"Albertonykus": {
+"Name": "Albertonykus",
+"Period": "Early Cretaceous",
+"Continent": "North America",
+"Walking": "Biped",
+"Description": "Earliest known Alvarezsaurid.",
+"Diet": "Insectivore"
+}
+,"Baryonyx": {
+"Name": "Baryonyx",
+"Period": "Early Cretaceous",
+"Continent": "Europe",
+"Weight": "6000",
+"Walking": "Biped",
+"Description": "One of the only known dinosaurs with a fish-only diet.",
+"Diet": "Piscivore"
+}
+,"Deinonychus": {
+"Name": "Deinonychus",
+"Period": "Early Cretaceous",
+"Continent": "North America",
+"Weight": "150",
+"Walking": "Biped",
+"Diet": "Carnivore"
+}
+,"Diplocaulus": {
+"Name": "Diplocaulus",
+"Period": "Late Permian",
+"Continent": "North America",
+"Walking": "Quadruped",
+"Description": "They actually had fins on the side of their body.",
+"Diet": "Carnivore"
+}
+,"Megalosaurus": {
+"Name": "Megalosaurus",
+"Period": "Jurassic",
+"Continent": "Europe",
+"Weight": "2200",
+"Walking": "Biped",
+"Description": "Originally thought to be a quadriped. First dinosaur to be named.",
+"Diet": "Carnivore"
+}
+,"Giganotosaurus": {
+"Name": "Giganotosaurus",
+"Period": "Late Cretaceous",
+"Continent": "South America",
+"Weight": "30420",
+"Walking": "Biped",
+"Description": "Largest hunter and also the coolest ever.",
+"Diet": "Carnivore"
+}
+,"Quetzalcoatlus": {
+"Name": "Quetzalcoatlus",
+"Period": "Late Cretaceous",
+"Continent": "North America",
+"Weight": "440",
+"Walking": "Quadriped",
+"Description": "Largest known flying animal of all time.",
+"Diet": "Carnivore"
+}
+,"Yangchuanosaurus": {
+"Name": "Yangchuanosaurus",
+"Period": "Oxfordian",
+"Continent": "Asia",
+"Weight": "7200",
+"Walking": "Biped",
+"Diet": "Carnivore"
+}
 }

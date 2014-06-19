@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Dinosaur Catalog
 
 It may not be immediately evident, but I am a huge fan of dinosaurs. They're huge and dangerous and have cool names like Giganotosaurus (not to be confused with Gigantosaurus).
@@ -26,3 +27,19 @@ Go check out the CSVs and come back. Done? Cool, I've just got a few features I 
 2. CSV isn't may favorite format in the world. Can you implement a JSON export feature?
 
 Happy Hunting. (Giganotosaurus was the largest hunting dinosaur, at 46 feet long and up to 8 tons! Suh-weet.)
+=======
+# Level Up Exercises
+
+These are the combined exercises used at <http://learnenova.herokuapp.com>. You can do them out of sequence, but you'll probably be missing the point. Do the right thing, visit the site.
+
+## How to Do These Exercises
+
+1. Fork this repo into your own space
+2. Wait until you're asked to do one of the exercises
+3. Use your fork, develop code, push it back upward
+4. Profit!
+
+## The First Lesson
+
+Like everything else in the world, these exercises have errors and problems and typos. We experience this problem whenever we code, and the only way to stay sane as a group is to fix problems as we find them. Be a mensch, send pull requests.
+>>>>>>> 3226448529959e457b185dbb9fd7add8b28df256

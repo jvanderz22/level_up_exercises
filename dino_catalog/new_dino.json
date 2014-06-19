@@ -1,134 +1,146 @@
 {
-"Abrictosaurus": {
-"Name": "Abrictosaurus",
-"Period": "Jurassic",
-"Continent": "Africa",
-"Weight": "100",
-"Walking": "Biped",
-"Diet": "Herbivore"
-}
-,"Afrovenator": {
-"Name": "Afrovenator",
-"Period": "Jurassic",
-"Continent": "Africa",
-"Walking": "Biped",
-"Diet": "Carnivore"
-}
-,"Carcharodontosaurus": {
-"Name": "Carcharodontosaurus",
-"Period": "Albian",
-"Continent": "Africa",
-"Weight": "3000",
-"Walking": "Biped",
-"Diet": "Carnivore"
-}
-,"Giraffatitan": {
-"Name": "Giraffatitan",
-"Period": "Jurassic",
-"Continent": "Africa",
-"Weight": "6600",
-"Walking": "Quadriped",
-"Diet": "Herbivore"
-}
-,"Paralititan": {
-"Name": "Paralititan",
-"Period": "Cretaceous",
-"Continent": "Africa",
-"Weight": "120000",
-"Walking": "Quadriped",
-"Diet": "Herbivore"
-}
-,"Suchomimus": {
-"Name": "Suchomimus",
-"Period": "Cretaceous",
-"Continent": "Africa",
-"Weight": "10400",
-"Walking": "Biped",
-"Diet": "Carnivore"
-}
-,"Melanorosaurus": {
-"Name": "Melanorosaurus",
-"Period": "Triassic",
-"Continent": "Africa",
-"Weight": "2400",
-"Walking": "Quadriped",
-"Diet": "Herbivore"
-}
-,"Albertosaurus": {
-"Name": "Albertosaurus",
-"Period": "Late Cretaceous",
-"Continent": "North America",
-"Weight": "2000",
-"Walking": "Biped",
-"Description": "Like a T-Rex but smaller.",
-"Diet": "Carnivore"
-}
-,"Albertonykus": {
-"Name": "Albertonykus",
-"Period": "Early Cretaceous",
-"Continent": "North America",
-"Walking": "Biped",
-"Description": "Earliest known Alvarezsaurid.",
-"Diet": "Insectivore"
-}
-,"Baryonyx": {
-"Name": "Baryonyx",
-"Period": "Early Cretaceous",
-"Continent": "Europe",
-"Weight": "6000",
-"Walking": "Biped",
-"Description": "One of the only known dinosaurs with a fish-only diet.",
-"Diet": "Piscivore"
-}
-,"Deinonychus": {
-"Name": "Deinonychus",
-"Period": "Early Cretaceous",
-"Continent": "North America",
-"Weight": "150",
-"Walking": "Biped",
-"Diet": "Carnivore"
-}
-,"Diplocaulus": {
-"Name": "Diplocaulus",
-"Period": "Late Permian",
-"Continent": "North America",
-"Walking": "Quadruped",
-"Description": "They actually had fins on the side of their body.",
-"Diet": "Carnivore"
-}
-,"Megalosaurus": {
-"Name": "Megalosaurus",
-"Period": "Jurassic",
-"Continent": "Europe",
-"Weight": "2200",
-"Walking": "Biped",
-"Description": "Originally thought to be a quadriped. First dinosaur to be named.",
-"Diet": "Carnivore"
-}
-,"Giganotosaurus": {
-"Name": "Giganotosaurus",
-"Period": "Late Cretaceous",
-"Continent": "South America",
-"Weight": "30420",
-"Walking": "Biped",
-"Description": "Largest hunter and also the coolest ever.",
-"Diet": "Carnivore"
-}
-,"Quetzalcoatlus": {
-"Name": "Quetzalcoatlus",
-"Period": "Late Cretaceous",
-"Continent": "North America",
-"Weight": "440",
-"Walking": "Quadriped",
-"Description": "Largest known flying animal of all time.",
-"Diet": "Carnivore"
-}
-,"Yangchuanosaurus": {
-"Name": "Yangchuanosaurus",
-"Period": "Oxfordian",
-"Continent": "Asia",
-"Weight": "7200",
-"Walking": "Biped",
-"Diet": "Carnivore"
-}
+  "Abrictosaurus": {
+    "name": "Abrictosaurus",
+    "period": "Jurassic",
+    "continent": "Africa",
+    "weight": 100,
+    "walking": "Biped",
+    "description": null,
+    "diet": "Herbivore"
+  },
+  "Afrovenator": {
+    "name": "Afrovenator",
+    "period": "Jurassic",
+    "continent": "Africa",
+    "weight": null,
+    "walking": "Biped",
+    "description": null,
+    "diet": "Carnivore"
+  },
+  "Carcharodontosaurus": {
+    "name": "Carcharodontosaurus",
+    "period": "Albian",
+    "continent": "Africa",
+    "weight": 3000,
+    "walking": "Biped",
+    "description": null,
+    "diet": "Carnivore"
+  },
+  "Giraffatitan": {
+    "name": "Giraffatitan",
+    "period": "Jurassic",
+    "continent": "Africa",
+    "weight": 6600,
+    "walking": "Quadriped",
+    "description": null,
+    "diet": "Herbivore"
+  },
+  "Paralititan": {
+    "name": "Paralititan",
+    "period": "Cretaceous",
+    "continent": "Africa",
+    "weight": 120000,
+    "walking": "Quadriped",
+    "description": null,
+    "diet": "Herbivore"
+  },
+  "Suchomimus": {
+    "name": "Suchomimus",
+    "period": "Cretaceous",
+    "continent": "Africa",
+    "weight": 10400,
+    "walking": "Biped",
+    "description": null,
+    "diet": "Carnivore"
+  },
+  "Melanorosaurus": {
+    "name": "Melanorosaurus",
+    "period": "Triassic",
+    "continent": "Africa",
+    "weight": 2400,
+    "walking": "Quadriped",
+    "description": null,
+    "diet": "Herbivore"
+  },
+  "Albertosaurus": {
+    "name": "Albertosaurus",
+    "period": "Late Cretaceous",
+    "continent": "North America",
+    "weight": 2000,
+    "walking": "Biped",
+    "description": "Like a T-Rex but smaller.",
+    "diet": "Carnivore"
+  },
+  "Albertonykus": {
+    "name": "Albertonykus",
+    "period": "Early Cretaceous",
+    "continent": "North America",
+    "weight": null,
+    "walking": "Biped",
+    "description": "Earliest known Alvarezsaurid.",
+    "diet": "Insectivore"
+  },
+  "Baryonyx": {
+    "name": "Baryonyx",
+    "period": "Early Cretaceous",
+    "continent": "Europe",
+    "weight": 6000,
+    "walking": "Biped",
+    "description": "One of the only known dinosaurs with a fish-only diet.",
+    "diet": "Piscivore"
+  },
+  "Deinonychus": {
+    "name": "Deinonychus",
+    "period": "Early Cretaceous",
+    "continent": "North America",
+    "weight": 150,
+    "walking": "Biped",
+    "description": null,
+    "diet": "Carnivore"
+  },
+  "Diplocaulus": {
+    "name": "Diplocaulus",
+    "period": "Late Permian",
+    "continent": "North America",
+    "weight": null,
+    "walking": "Quadruped",
+    "description": "They actually had fins on the side of their body.",
+    "diet": "Carnivore"
+  },
+  "Megalosaurus": {
+    "name": "Megalosaurus",
+    "period": "Jurassic",
+    "continent": "Europe",
+    "weight": 2200,
+    "walking": "Biped",
+    "description": "Originally thought to be a quadriped. First dinosaur to be named.",
+    "diet": "Carnivore"
+  },
+  "Giganotosaurus": {
+    "name": "Giganotosaurus",
+    "period": "Late Cretaceous",
+    "continent": "South America",
+    "weight": 30420,
+    "walking": "Biped",
+    "description": "Largest hunter and also the coolest ever.",
+    "diet": "Carnivore"
+  },
+  "Quetzalcoatlus": {
+    "name": "Quetzalcoatlus",
+    "period": "Late Cretaceous",
+    "continent": "North America",
+    "weight": 440,
+    "walking": "Quadriped",
+    "description": "Largest known flying animal of all time.",
+    "diet": "Carnivore"
+  },
+  "Yangchuanosaurus": {
+    "name": "Yangchuanosaurus",
+    "period": "Oxfordian",
+    "continent": "Asia",
+    "weight": 7200,
+    "walking": "Biped",
+    "description": null,
+    "diet": "Carnivore"
+  }
 }

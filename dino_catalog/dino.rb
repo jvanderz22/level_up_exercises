@@ -3,34 +3,45 @@ class Dino
 
   CARNIVOROUS_DIETS = %w(carnivore piscivore insectivore)
 
- def initialize(data)
+  def initialize(data)
     @name = data[:name]
     @period = data[:period]
     @continent = data[:continent]
-    @weight = data[:weight_in_lbs].to_i unless data[:weight_in_lbs].nil?
+    @weight = data[:weight_in_lbs].to_i if  data[:weight_in_lbs]
     @walking = data[:walking]
     @description = data[:description]
     @diet = data[:diet]
   end
 
- def to_s
-    output_vals = []
-    instance_variables.each do |var|
+  def to_s
+    output_vals = instance_variables.map do |var|
       value = instance_variable_get(var)
+      next unless value
       pretty_var = var[1..-1]
       pretty_var.capitalize!
-      unless value.nil?
-        output_vals <<  "#{pretty_var}: #{value}"
-      end
+      "#{pretty_var}: #{value}"
     end
-    output_vals.join(", ")
+    output_vals.compact.join(", ")
   end
+
+ def to_hash
+   dinoHash = {
+      name: @name,
+      period: @period,
+      continent: @continent,
+      weight: @weight,
+      walking: @walking,
+      description: @description,
+      diet: @diet
+   }
+ end
 
   def matches_search?(parameters)
     parameters.all? { |key, value| matches_search_parameter?(key, value) }
   end
 
   private
+
   def matches_search_parameter?(key, value)
     self.send("match_#{key.to_s}?".to_sym, value)
   end

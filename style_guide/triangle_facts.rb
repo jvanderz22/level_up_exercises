@@ -15,21 +15,15 @@ class Triangle
 
   #fixed
   def scalene?
-    if equalateral? || isosceles?
-      false
-    else
-      true
-    end
+    equalateral? || isosceles? ? false : true
   end
 
   def reciteFacts
     puts "This triangle is equalateral!" if equalateral?
     puts "This triangle is isosceles! Also,that word is hard to type." if isosceles?
     puts "This triangle is scalene and mathematically boring." if scalene?
-
     angles = calculateAngles(side1, side2, side3)
     puts "The angles of this triangle are #{angles.join(',')}"
-
     puts "This triangle is also a right triangle!" if angles.include?(90)
     puts ''
   end

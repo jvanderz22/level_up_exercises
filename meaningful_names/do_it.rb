@@ -1,37 +1,37 @@
 class NumberUtils
-  attr_accessor :values, :i
+  attr_accessor :prime_factors, :largest_value
 
-  def initialize(i = 1_000)
-    @values = {}
-    @i = i
-    do_it
+  def initialize(largest_value = 1_000)
+    @prime_factors = {}
+    @largest_value = largest_value
+    calc_all_prime_factors
   end
 
-  def do_it
-    1.upto(@i) do |i|
-      @values[i] = get_values_for(i)
+  def calc_all_prime_factors
+    1.upto(@largest_value) do |num|
+      @prime_factors[num] = calc_prime_factors_for(num)
     end
   end
 
-  def get_values_for(i)
-    i2 = i
-    v = []
-    2.upto(i) do |n|
-      while (i2 % n).zero?
-        v << n
-        i2 = i2 / n
+  def calc_prime_factors_for(num)
+    cur_max_factor = num
+    factors_array = []
+    2.upto(num) do |possible_factor|
+      while (cur_max_factor % possible_factor).zero?
+        factors_array << possible_factor
+        cur_max_factor = cur_max_factor / possible_factor
       end
     end
-    v
+    factors_array
   end
 
-  def get_values(i)
-    raise 'Value too high!' unless i <= @i
-    @values[i]
+  def get_values(num)
+    raise 'Value too high!' unless num <= @largest_value
+    @prime_factors[num]
   end
 
   def all
-    @values
+    @prime_factors
   end
 end
 

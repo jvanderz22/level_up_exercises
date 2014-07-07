@@ -42,6 +42,8 @@ class Bomb
     @status = :exploded if @status == :active
   end
 
+  private
+
   def valid_code?(code)
     !!(code =~ /^\d{4}$/)
   end

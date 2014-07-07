@@ -4,6 +4,7 @@ Feature: Inactive Bomb
   I want to activate a booted bomb
   So that it can explode
 
+  #happy paths
   Scenario: There is an inactive bomb interface
     Given the bomb is booted with activation code "1234"
     Then I should see "Activate bomb?"
@@ -16,6 +17,7 @@ Feature: Inactive Bomb
     And I attempt to activate the bomb
     Then the bomb should be "Active"
 
+  #sad path
   Scenario: Can't activate bomb with wrong code
     Given the bomb is booted with activation code "1234"
     When I enter activation code "5678"

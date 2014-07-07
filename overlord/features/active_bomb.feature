@@ -4,6 +4,7 @@ Feature: Activated Bomb
   I want to deactivate a bomb
   So that it can no longer explode
 
+  #happy path
   Scenario: There is an active bomb interface
     Given the bomb is booted with deactivation code "0000"
     And the bomb is activated
@@ -19,14 +20,6 @@ Feature: Activated Bomb
     And I attempt to deactivate the bomb
     Then the bomb should be "Inactive"
 
-  Scenario: Won't deactivate with the wrong code
-    Given the bomb is booted with deactivation code "0000"
-    And the bomb is activated
-    When I enter deactivation code "1111"
-    And I attempt to deactivate the bomb
-    Then the bomb should be "Active"
-    And the page should say there is "1" failed deactivation attempt
-
   Scenario: Will explode with the wrong code entered 3 times
     Given the bomb is booted with deactivation code "0000"
     And the bomb is activated
@@ -37,4 +30,13 @@ Feature: Activated Bomb
     And I enter deactivation code "1111"
     And I attempt to deactivate the bomb
     Then the bomb should be "Exploded"
- 
+
+  #sad path
+  Scenario: Won't deactivate with the wrong code
+    Given the bomb is booted with deactivation code "0000"
+    And the bomb is activated
+    When I enter deactivation code "1111"
+    And I attempt to deactivate the bomb
+    Then the bomb should be "Active"
+    And the page should say there is "1" failed deactivation attempt
+

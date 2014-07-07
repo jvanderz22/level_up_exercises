@@ -4,6 +4,7 @@ Feature: Villain Boots Bomb
   I want to open the website
   So that I can boot the bomb
 
+  #happy paths
   Scenario: Load Home Page
     Given the bomb is not booted
     Then I should see "Boot bomb?"
@@ -31,6 +32,7 @@ Feature: Villain Boots Bomb
     And I attempt to boot the bomb
     Then the bomb should be "Inactive"
 
+  #sad paths
   Scenario Outline: Fail to boot with an invalid activation code
     Given the bomb is not booted
     And an entered valid deactivation code

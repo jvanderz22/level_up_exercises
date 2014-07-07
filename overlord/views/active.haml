@@ -1,0 +1,10 @@
+.container
+  %span Deactivate bomb?
+  %form{:action => "", :method => "post"}
+    %span
+      Deactivation Code
+      %input{:type => "text", :name => :deactivation_code}
+    %input{:type => "submit", :value => "Deactivate", :class => "button"}
+  %span
+    You have failed to deactivate the bomb #{locals[:failed_attempts]} time(s).
+    After 3 failed attempts, the bomb will explode.

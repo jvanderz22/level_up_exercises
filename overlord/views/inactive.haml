@@ -1,0 +1,7 @@
+.container
+  %span Activate bomb?
+  %form{:action => "", :method => "post"}
+    %span
+      Enter Activation Code
+      %input{:type => "text", :name => :activation_code}
+    %input{:type => "submit", :value => "Activate", :class => "button"}

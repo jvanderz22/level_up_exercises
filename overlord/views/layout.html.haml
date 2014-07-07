@@ -1,0 +1,14 @@
+!!!
+%html
+  %head
+    %link{:rel => "stylesheet", :type => "text/css", :href => "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"}
+    %title Evil Villain's Bomb
+    %link href="/application.css.scss"
+
+  %body
+    .container
+      %h2 The bomb's current status is #{locals[:status]}
+      = yield
+    .reset-button
+      %form{:action => "reset", :method => "post"}
+        %input{:type => "submit", :value => "Reset", :class => "button"}

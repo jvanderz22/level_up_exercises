@@ -1,0 +1,1 @@
+rspec spec/overlord/bomb_spec.rb -format doc --color

@@ -13,24 +13,8 @@ class Calculations
     data.length
   end
 
-  def all_conversions
-    data.select do |hash|
-      hash["result"] == 1
-    end.count
-  end
-
-  def conversions(cohort)
-    data.select do |hash|
-      hash["cohort"] == cohort && hash["result"] == 1
-    end.count
-  end
-
   def percent_conversion(cohort)
     conversions(cohort).to_f/attempted_conversions(cohort)
-  end
-
-  def attempted_conversions(cohort)
-    data.select { |hash| hash["cohort"] == cohort }.count
   end
 
   def standard_error(cohort)
@@ -41,16 +25,14 @@ class Calculations
   end
 
   def confidence_interval(cohort)
-    lower_CI = percent_conversion(cohort) - (1.96 * standard_error(cohort))
-    upper_CI = percent_conversion(cohort) + (1.96 * standard_error(cohort))
-    [lower_CI, upper_CI]
-  end
-
-  def find_current_leader
-    cohorts.max_by { |cohort| percent_conversion(cohort) }
+    lower_bound = percent_conversion(cohort) - (1.96 * standard_error(cohort))
+    upper_bound = percent_conversion(cohort) + (1.96 * standard_error(cohort))
+    [lower_bound, upper_bound]
   end
 
   def chi_square(cohort)
+    #chi_square value calculator
+    #implemented formula can be found here: http://math.hws.edu/javamath/ryan/ChiSquare.html
     quadrant_a = conversions(cohort)
     quadrant_b = attempted_conversions(cohort) - conversions(cohort)
     quadrant_c = all_conversions - conversions(cohort)
@@ -66,7 +48,32 @@ class Calculations
     Statistics2.chi2_x(deg_of_freedom, chi_square(current_leader))
   end
 
+  private
+
+  def all_conversions
+    data.count do |hash|
+      hash["result"] == 1
+    end
+  end
+
+  def conversions(cohort)
+    data.count do |hash|
+      hash["cohort"] == cohort && hash["result"] == 1
+    end
+  end
+
+  def attempted_conversions(cohort)
+    data.count { |hash| hash["cohort"] == cohort }
+  end
+
+  def find_current_leader
+    cohorts.max_by { |cohort| percent_conversion(cohort) }
+  end
+
   def cohorts
     data.map { |hash| hash["cohort"] }.uniq
   end
+
+
+
 end

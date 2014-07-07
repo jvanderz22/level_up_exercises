@@ -1,0 +1,11 @@
+.container
+  %span Boot bomb?
+  %form{:action => "", :method => "post"}
+    .line
+      Activation Code:
+      %input{:type => "text", :name => :activation_code}
+    .line
+      Deactivation Code:
+      %input{:type => "text", :name => :deactivation_code}
+    %input{:type => "submit", :value => "Boot", :class => "button"}
+

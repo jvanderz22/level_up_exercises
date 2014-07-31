@@ -80,7 +80,9 @@ describe Bomb do
         bomb.activate("5678")
         expect(bomb.status).to eq(:inactive)
       end
-      it "should not activate the bomb if the bomb has exploded " do
+    context 'bomb is exploded'
+      #sad path
+      it 'should not activate the bomb' do
         bomb.boot("1234", "0000")
         bomb.activate("1234")
         bomb.explode
@@ -90,7 +92,7 @@ describe Bomb do
     end
     context "bomb is not booted" do
       #sad path
-      it "should not activate the bomb if is isn't booted" do
+      it "should not activate the bomb" do
         bomb.activate("1234")
         expect(bomb.status).not_to eq(:active)
       end

@@ -12,8 +12,12 @@ class Robot
     else
       defineName
     end
+<<<<<<< HEAD
+    validateName
+=======
 
     raise NameCollisionError, 'There was a problem generating the robot name!' if !(name =~ /[[:alpha:]]{2}[[:digit:]]{3}/) || @@registry.include?(name)
+>>>>>>> upstream/master
     @@registry << @name
   end
 

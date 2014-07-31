@@ -15,15 +15,13 @@ class Bomb
       @activation_code = given_activate_code
       @deactivation_code = given_deactivate_code
       @status = :inactive
-    else
-      return :failed
     end
   end
 
   def activate(code)
-    if activation_code == code && @status == :inactive
+   if activation_code == code && @status == :inactive
       @status = :active
-    end
+   end
   end
 
   def deactivate(code)

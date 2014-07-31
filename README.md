@@ -30,7 +30,7 @@ Happy Hunting. (Giganotosaurus was the largest hunting dinosaur, at 46 feet long
 =======
 # Level Up Exercises
 
-These are the combined exercises used at <http://learnenova.herokuapp.com>. You can do them out of sequence, but you'll probably be missing the point. Do the right thing, visit the site.
+These are the combined exercises used at http://leveluprails.herokuapp.com. You can do them out of sequence, but you'll probably be missing the point. Do the right thing, visit the site.
 
 ## How to Do These Exercises
 

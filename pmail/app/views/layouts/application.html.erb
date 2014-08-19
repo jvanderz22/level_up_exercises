@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>App</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script>
+    $(function() {
+      $('.form-control').hover(function() {
+        $('.btn.extend').css('border-color', '#A1A1A1');
+      }, function() {
+        // on mouseout, reset the background colour
+        $('.btn.extend').css('border-color', '');
+      });
+    });
+
+    $(function() {
+      $('.btn.extend').hover(function() {
+        $('.form-control').css('border-color', '#A1A1A1');
+      }, function() {
+        // on mouseout, reset the background colour
+        $('.form-control').css('border-color', '');
+      });
+    });
+
+    $(function() {
+      $('.dropdown-app-select').focus(function() {
+        document.getElementById("app-selector").focus();
+      }
+    });
+
+
+
+    $('.dropdown.keep-open').on({
+    "shown.bs.dropdown": function() { this.closable = false; },
+    "click":             function() { this.closable = true; },
+    "hide.bs.dropdown":  function() { return this.closable; }
+});
+  </script>
+
+</head>
+<body>
+  <div class="container-non-responsive">
+
+    <div class="row header">
+      <div class="col-sm-1 col-xs-3" style="min-width:150px;">
+        <a href="#inbox" title="Mail">
+          <!--<style="background-image:url('https://www.google.com/a/enova.com/images/logo.gif?alpha=1&amp;service=google_default');background-size:contain;max-width:144px;max-height:60px">-->
+          <img src="<%= asset_path( 'pmail.png') %>" style="max-width:144px;max-height:60px"></a>
+      </div>
+      
+      <div class="col-sm-8 col-xs-9">
+        <div class="input-group input-group-sm search-bar pull-left">
+          <input class="form-control extend" type="text">
+          <div class="input-group-btn dropdown keep-open">
+            <a type="button" class="btn extend dropdown-toggle" data-toggle="dropdown"> 
+              <span class="caret"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-large pull-right" role="menu">
+              <form class="search-form">
+                <div class="dropdown-text"> 
+                  <div> 
+                    Search
+                    <select class="select-style" name="search"> 
+                      <option value="all_mail"> All Mail </option>
+                      <option class="divider" value="custom_tag"> Custom Tag </option>
+                      <option value="New"> New </option>
+                    </select>
+                  </div>
+                </div>
+                
+                <div class="dropdown-text dropdown-padding"> From </div>
+                <div> <input class="search-dropdown-input" type="text" name="from"> </div>
+
+                <div class="dropdown-text dropdown-padding"> To </div>
+                <div> <input class="search-dropdown-input" type="text" name="to"> </div>
+
+                <div class="dropdown-text dropdown-padding"> Subject </div>
+                <div> <input class="search-dropdown-input" type="text" name="subject"> </div>
+
+                <div class="dropdown-text dropdown-padding"> Has the words </div>
+                <div> <input class="search-dropdown-input" type="text" name="has-the-words"></div>
+
+                <div class="dropdown-text dropdown-padding"> Doesn't have </div>
+                <div> <input class="search-dropdown-input" type="text" name="doesnt-have"> </div>
+
+                <div class="dropdown-text"> <input type="checkbox" name="has-attachment"> 
+                  Has attachment
+                </div>
+
+                <div class="dropdown-text"> <input type="checkbox" name="dont-include-chats">
+                  Don't include chats
+                </div>
+
+                <div class="dropdown-text">
+                  <span>
+                    Size 
+                    <select class="select-style" name="size">
+                      <option value="greater_than"> greater than </option>
+                      <option value="less_than"> less than </option>
+                    </select>
+                    <input type="text" name="size_val">
+                    <select class="select-style" name="unit">
+                      <option value="mb"> MB </option>
+                      <option value="kb"> KB </option>
+                      <option value="bytes"> Bytes </option>
+                    </select>
+                  </span>
+                </div>
+                <div class="dropdown-text" style="padding-top:5px;">
+                  <span>
+                    Date within
+                    <select class="select-style" name="date_within">
+                      <option value="one_day"> 1 day </option>
+                      <option value="three_days">3 days </option>
+                      <option value="one_week">1 week </option>
+                      <option value="two_weeks">2 weeks </option>
+                      <option value="one_month">1 month </option>
+                      <option value="two_months">2 months </option>
+                      <option value="six_months">6 months </option>
+                      <option value="one_year">1 year </option>
+                    </select>
+                    of <input type="date" name="date">
+                  </span>
+                </div>
+
+                <div class="dropdown-text" style="postion:relative">
+                  <span style="float:left;">
+                    <button class="btn btn-long btn-blue">
+                      <i class="fa fa-search fa-white fa-lg"></i>
+                    </button>
+                  </span>
+                  <span style="padding: 10px; right:0; position:absolute; bottom:0;">
+                    <a href="#"> Create filter with this search <i class="fa fa-angle-double-right"></i></a>
+                  </span>
+                </div>
+              </form>
+            </div>
+            <button type="submit" class="btn btn-long btn-blue">
+              <i class="fa fa-search fa-white fa-lg"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-sm-1">
+        <a class="applications-icon" data-toggle="dropdown" href="#">
+          <span class="glyphicon glyphicon-th fa-gray"></span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-icons" role="menu"> 
+          <div class="row">
+            <div class="col-xs-4 clickable-icon">
+              <a href="google.com">
+                <div>
+                  <img src="<%= asset_path( 'search.png') %>" style="max-width:144px;max-height:60px">
+                </div>
+                <div>
+                  Search
+                </div>
+              </a>
+            </div>
+            <div class="col-xs-4 clickable-icon">
+              <a href="google.com">
+                <div>
+                  <img src="<%= asset_path( 'gmail.png') %>" style="max-width:144px;max-height:60px">
+                </div>
+                <div>
+                  Mail
+                </div>
+              </a>
+            </div>
+            <div class="col-xs-4 clickable-icon">
+              <a href="google.com">
+                <div>
+                  <img src="<%= asset_path( 'drive.png') %>" style="max-width:144px;max-height:60px">
+                </div>
+                <div>
+                  Drive
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-4 clickable-icon">
+              <a href="google.com">
+                <div>
+                  <img src="<%= asset_path( 'calendar.jpeg') %>" style="max-width:144px;max-height:60px">
+                </div>
+                <div>
+                  Calendar
+                </div>
+              </a>
+            </div>
+            <div class="col-xs-4 clickable-icon">
+              <a href="google.com">
+                <div>
+                  <img src="<%= asset_path( 'groups.png') %>" style="max-width:144px;max-height:60px">
+                </div>
+                <div>
+                  Groups
+                </div>
+              </a>
+            </div>
+            <div class="col-xs-4 clickable-icon">
+              <a href="google.com">
+                <div>
+                  <img src="<%= asset_path( 'contacts.png') %>" style="max-width:144px;max-height:60px">
+                </div>
+                <div>
+                  Contacts
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2 account-name">
+        <a class="dropdown-link" data-toggle="dropdown" href="#"> 
+          jvanderzwaag@enova.com <i class="fa fa-caret-down"> </i> 
+        </a>
+        <div class="dropdown-menu dropdown-menu-account" data-role="menu">
+          <div class="managed-by">
+            <div> This account is managed by enova.com </div>
+            <div> <a href="#"> Learn more </a> </div>
+          </div>
+          <div class="account-info">
+            <div style="font-weight: bold;"> Jordan VanderZwaag </div>
+            <div> jvanderzwaag@enova.com </div>
+            <div> <a href="#"> Account </a> &#8212; <a href="#"> Privacy </a> </div>
+          </div>
+          <div class="bottom-buttons">
+            <div> 
+              <button class="btn btn-default btn-sm"> Add Account </button> 
+              <button class="btn btn-default btn-sm" style="float:right;"> Sign Out </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row second-toolbar">
+    <div class="col-xs-2">
+      <div class="app-select" id="app-selector">
+        <a class="dropdown-app-select" data-toggle="dropdown" href="#"> 
+          Mail <i class="fa fa-caret-down"> </i> 
+        </a>
+        <div class="dropdown-menu dropdown-menu-app" data-role="menu">
+          <a href="#"> <div> Mail </div> </a>
+          <a href="#"> <div> Contacts </div> </a>
+          <a href="#"> <div> Tasks </div> </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-7">
+      Second
+    </div>
+    <div class="col-xs-3">
+      Third
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      This is the side bar
+    </div>
+    <div class="col-md-10">
+      <div class="container">
+
+        <%= yield %>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

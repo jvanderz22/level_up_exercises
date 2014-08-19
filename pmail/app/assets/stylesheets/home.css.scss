@@ -1,0 +1,270 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.container-non-responsive {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  white-space: nowrap;
+  background-color: #F1F1F1;
+
+  .dropdown-link {
+    overflow: hidden;
+  }
+  .applications-icon {
+    overflow: hidden;
+  }
+}
+
+.header{
+  background-color: #F1F1F1;
+  border-bottom: 1px solid #E5E5E5;
+  text-color: #6D6D6D;
+  height: 60px;
+  padding-left: 30px;
+  padding-right: 10px;
+}
+
+.header > div {
+  float: none;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+
+.search-bar{
+  //max-width: 650px;
+  //min-width: 350px;
+  //width: auto;
+  position: fixed;
+  margin-left: 20px;
+}
+
+.input-group-sm > .form-control.extend {
+  border-right-width: 0;
+  border-radius: 0;
+}
+
+.form-control.extend:hover {
+  border-color: #A1A1A1;
+}
+
+.btn.btn-blue {
+  background-color: #4586F5;
+}
+
+.btn.btn-long {
+  width: 75px;
+}
+
+.fa-white {
+  color: white;
+}
+
+.fa-gray {
+  color: gray;
+}
+
+.fa-gray:hover{
+  color:black;
+}
+
+.glyphicon-th {
+  font-size: 1.2em;
+}
+
+.input-group-sm > .input-group-btn > .btn.extend{
+  border-radius: 0;
+}
+
+.btn.extend {
+  background-color: white;
+  color: #CCCCCC;
+  border: 1px solid #CCCCCC;
+  border-left: 0 solid #000000;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.btn.extend:hover {
+  border-color: #A1A1A1;
+  color: black;
+}
+
+.input-group-btn:last-child > .btn {
+  margin-left: 0 !important;
+}
+
+.dropdown-menu.dropdown-menu-large {
+  width: 590px;
+  margin-right: 60px;
+  margin-top: 0;
+  border-width-top: 0;
+  border-radius: 0;
+  padding: 10px 10px 10px 10px;
+  font-size: small;
+}
+
+.search-dropdown-input {
+  width: 100%;
+}
+
+.dropdown-text {
+  color: #8B8080;
+  font-size: small;
+}
+
+.dropdown-padding {
+  padding-top: 5px;
+}
+
+.blank-div {
+  height: 10px;
+}
+
+.select-style {
+  padding: 5px;
+  border-radius: 0px;
+  color: black;
+  -webkit-border-radius: 0;
+}
+
+.applications-icon{
+  float: right;
+  position: relative;
+}
+
+
+.dropdown-menu.dropdown-menu-icons {
+  width: 300px;
+  left: 20px;
+  float: right;
+  border-radius: 0px;
+  padding: 30px 40px;
+  font-size: small;
+  text-align: center;
+
+  .clickable-icon {
+    padding: 10px;
+    border: 1px solid transparent;
+  }
+
+  .clickable-icon:hover {
+    border-color: #F1F1F1; 
+  }
+
+  a {
+    color: inherit;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.account-name {
+  .dropdown-link {
+    font-size: small;
+    color: inherit;
+  }
+  .dropdown-link:hover {
+    text-decoration: none;
+  }
+  .dropdown-link:active {
+    text-decoration: none;
+  }
+}
+
+
+.dropdown-menu.dropdown-menu-account {
+  width: 250px;
+  left: -50px;
+  float: right;
+  border-radius: 0px;
+  padding: 0;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: small;
+
+  .managed-by {
+    padding: 10px 15px;
+    font-size: x-small;
+    background-color: #FEF9DB;
+  }
+
+  .account-info {
+    padding: 10px 15px 15px 15px;
+  }
+
+  .bottom-buttons {
+    border-top: 1px solid #C3C3C3;
+    background-color: #F5F5F5;
+    padding: 10px 15px;
+  }
+}
+
+.second-toolbar {
+  padding: 8px;
+  border-bottom: 1px solid gray;
+}
+.app-select {
+  padding-left: 10px;
+  text-align: left;
+  border: 2px solid transparent;
+  
+  .dropdown-app-select {
+    font-size: 1.4em;
+    color: #DD4B39;
+    padding: 5px;
+
+    i {
+      font-size: 0.6em;
+    }
+
+    &:active {
+      text-decoration: none;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}
+
+.dropdown-menu.dropdown-menu-app {
+  float: right;
+  padding: 10px 0px 10px 0px;
+  left: 25px;
+  min-width: 100px;
+  width: 100px;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    div {
+      padding-left: 20px;
+    }
+  }
+
+  a:hover {
+    div {
+      background-color: blue;
+    }
+  }
+}
+
+
+
+
+
+
+
